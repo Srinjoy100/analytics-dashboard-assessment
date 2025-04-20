@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    Papa.parse("data-to-visualize/Electric_Vehicle_Population_Data.csv", {
+    Papa.parse("public/Electric_Vehicle_Population_Data.csv", {
       download: true,
       header: true,
       complete: function (result) {
