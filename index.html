@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electric Vehicle</title>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-br from-green-100 via-green-200 to-green-100 text-gray-800 min-h-screen transition-opacity duration-1000 opacity-0"
+    onload="document.body.classList.remove('opacity-0')"
+  >
+    <div class="max-w-5xl mx-auto p-5">
+      <h1 class="text-2xl font-semibold mb-4 text-center">
+        Electric Vehicle Population
+      </h1>
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <canvas
+          id="carTypechart"
+          class="bg-white p-4 rounded shadow transition-transform duration-300 hover:scale-105 h-96"
+        ></canvas>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <canvas
+          id="topChart"
+          class="bg-white p-4 rounded shadow transition-transform duration-300 hover:scale-105"
+        ></canvas>
+      </div>
+
+      <div class="mb-6">
+        <canvas
+          id="yearlyChart"
+          class="bg-white p-4 rounded shadow transition-transform duration-300 hover:scale-105"
+        ></canvas>
+      </div>
+      <div class="bg-white p-5 rounded shadow overflow-x-auto">
+        <h2 class="text-xl font-semibold mb-4">EV Data(Top 10)</h2>
+        <table id="Table" class="table-auto w-full border text-sm">
+          <thead class="bg-green-200">
+            <tr>
+              <th class="border px-3 py-2">VIN</th>
+              <th class="border px-3 py-2">Make</th>
+              <th class="border px-3 py-2">Model</th>
+              <th class="border px-3 py-2">Type</th>
+              <th class="border px-3 py-2">Year</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
